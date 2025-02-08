@@ -10,7 +10,8 @@ features_used = joblib.load("features_list.pkl")  # Charger les 244 colonnes uti
 st.title("🏡 Prédiction du Prix des Maisons")
 
 # Création des champs d'entrée pour les principales caractéristiques
-surface = st.number_input("Surface en pieds carrés", min_value=500, step=50)
+surface = st.number_input("Surface ", min_value=500, step=50)
+
 chambres = st.number_input("Nombre de chambres", min_value=1, step=1)
 sdb = st.number_input("Nombre de salles de bain", min_value=1,  step=1)
 garage = st.number_input("Nombre de garages", min_value=0, step=1)
