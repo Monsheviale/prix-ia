@@ -7,7 +7,7 @@ import pandas as pd
 model = joblib.load("house_price_model.pkl")
 features_used = joblib.load("features_list.pkl")  # Charger les 244 colonnes utilisées à l'entraînement
 
-st.title("🏡 Prédiction du Prix des Maisons")
+st.title("Prédiction du Prix des Maisons")
 
 # Création des champs d'entrée pour les principales caractéristiques
 surface = st.number_input("Aire", min_value=500, step=50)
@@ -34,6 +34,6 @@ if "YearBuilt" in data.columns:
     data["YearBuilt"] = annee_construction
 
 # Bouton pour prédire
-if st.button("Prédire le Prix 💰"):
+if st.button("Prédire le Prix "):
     prediction = model.predict(data)
-    st.success(f"💵 Le prix estimé de la maison est : {prediction[0]:,.2f} $")
+    st.success(f"Le prix estimé de la maison est : {prediction[0]:,.2f} $")
